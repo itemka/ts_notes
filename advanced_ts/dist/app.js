@@ -1,6 +1,6 @@
 "use strict";
-var btn = document.querySelector('#btn');
-btn === null || btn === void 0 ? void 0 : btn.addEventListener('click', function () {
+const btn = document.querySelector('#btn');
+btn === null || btn === void 0 ? void 0 : btn.addEventListener('click', () => {
     console.log('click');
 });
 function logInfo(data, _) {
