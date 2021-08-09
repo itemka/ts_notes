@@ -25,6 +25,7 @@ yarn-error.log*
 *.sw*
 
 /build
+/dist
 
 # test stuff
 /coverage
