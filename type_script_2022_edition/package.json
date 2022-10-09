@@ -1,0 +1,15 @@
+{
+  "name": "type_script_2022_edition",
+  "version": "1.0.0",
+  "main": "app.js",
+  "license": "MIT",
+  "scripts": {
+    "dev:1": "tsc src/1.get_started/index.ts",
+    "dev:app": "tsc app.ts",
+    "start": "lite-server"
+  },
+  "devDependencies": {
+    "lite-server": "^2.6.1",
+    "typescript": "^4.8.4"
+  }
+}
