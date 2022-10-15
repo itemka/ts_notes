@@ -146,7 +146,7 @@ class Car {
   readonly numberOfWheels: number = 4
 
   constructor (theModal: string) {
-    // we can rewrite it only inside consstructor
+    // we can rewrite it only inside constructor
     this.modal = theModal
   }
 }
@@ -230,11 +230,11 @@ function handle(res: MyResponse | MyError) {
   }
 }
 
-type AlertType = 'succes' | 'danger' | 'warning'
+type AlertType = 'success' | 'danger' | 'warning'
 function setAlertType(type: AlertType) {
   // ...
 }
-setAlertType('succes')
+setAlertType('success')
 
 /**
  * Generics
