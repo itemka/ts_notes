@@ -1,27 +1,38 @@
 "use strict";
 // basics types:
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 // [ number ]
 // [ string ]
 // [ boolean ]
-const n1 = 5;
-const n2 = 2.8;
-const isPrintResult = false;
-const phrase = 'Result is:';
+var n1 = 5;
+var n2 = 2.8;
+var isPrintResult = false;
+var phrase = 'Result is:';
 add(n1, n2, isPrintResult, phrase);
 function add(number1, number2, isPrint, phrase) {
-    const sum = number1 + number2;
+    var sum = number1 + number2;
     if (isPrint) {
         console.log(phrase, sum);
         return;
     }
     return sum;
 }
-const person = {
+var person = {
     name: 'Artsem',
     age: 26,
 };
-const personArray = Object.assign(Object.assign({}, person), { hobbies: ['Sport', 'Thinking'] });
-const personTuple = Object.assign(Object.assign({}, personArray), { role: [2, '2'] });
+var personArray = __assign(__assign({}, person), { hobbies: ['Sport', 'Thinking'] });
+var personTuple = __assign(__assign({}, personArray), { role: [2, '2'] });
 // [ enum ]
 var Role;
 (function (Role) {
@@ -29,13 +40,13 @@ var Role;
     Role[Role["READ_ONLY"] = 3] = "READ_ONLY";
     Role[Role["AUTHOR"] = 4] = "AUTHOR";
 })(Role || (Role = {}));
-const personEnum = Object.assign(Object.assign({}, personArray), { role: Role.ADMIN });
+var personEnum = __assign(__assign({}, personArray), { role: Role.ADMIN });
 // [ any ]
-const favoriteActivities = ['any', 4, false];
+var favoriteActivities = ['any', 4, false];
 // [ union types '|' ]
 combine(23, 5);
 function combine(input1, input2) {
-    let result;
+    var result;
     if (typeof input1 === "number" && typeof input2 === 'number') {
         result = input1 + input2;
     }
@@ -46,7 +57,7 @@ function combine(input1, input2) {
 }
 combineWithLiteral(23, 5, 'as-number');
 function combineWithLiteral(input1, input2, resultConversion) {
-    let result;
+    var result;
     if (typeof input1 === "number" && typeof input2 === 'number' || resultConversion === 'as-number') {
         result = +input1 + +input2;
     }
@@ -65,21 +76,21 @@ function printResult(number) {
     // return 'result'
 }
 // [ functions as types ]
-let combineValues;
+var combineValues;
 // let combineValues: Function;
 combineValues = addWithReturnType;
 // combineValues = print
 combineValues(1, 2);
 // [ function types & callbacks ]
-addAndHandle(1, 2, (b) => b);
+addAndHandle(1, 2, function (b) { return b; });
 function addAndHandle(n1, n2, cb) {
-    const result = addWithReturnType(n1, n2);
+    var result = addWithReturnType(n1, n2);
     cb(result);
 }
 // [ unknown ]
 // It's better than 'any' due to you need to add check before assign 'unknown' to something
-let useInput;
-let userName;
+var useInput;
+var userName;
 useInput = 5;
 useInput = '5';
 if (typeof useInput === 'string') {
@@ -89,7 +100,7 @@ if (typeof useInput === 'string') {
 console.log(generateError('New error: ', 432546542));
 function generateError(message, code) {
     throw {
-        message,
+        message: message,
         errorCode: code
     };
     // while (true) {}
