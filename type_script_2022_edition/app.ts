@@ -1,3 +1,3 @@
-const userName: string = 'Artsem';
+const userName2: string = 'Artsem';
 
-console.log([userName])
+console.log([userName2])

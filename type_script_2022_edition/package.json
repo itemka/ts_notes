@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "run:server": "lite-server",
-    "start": "tsc app.ts --watch",
+    "start": "tsc --watch",
     "dev:app": "tsc app.ts",
     "dev:src:1": "tsc src/1.get_started/index.ts",
     "dev:src:2": "tsc src/2.ts_basics_and_basic_types/index.ts"

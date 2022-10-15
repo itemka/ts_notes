@@ -74,7 +74,7 @@ const favoriteActivities: any = ['any', 4, false]
 // [ union types '|' ]
 combine(23, 5)
 
-function combine(input1: number | string, input2: number | string): number {
+function combine(input1: number | string, input2: number | string): number | string {
   let result;
 
   if (typeof input1 === "number" && typeof input2 === 'number') {
@@ -98,7 +98,7 @@ function combineWithLiteral(
   input1: Combinable,
   input2: Combinable,
   resultConversion: ResultConversion
-): number {
+): number | string {
   let result;
 
   if (typeof input1 === "number" && typeof input2 === 'number' || resultConversion === 'as-number') {

@@ -1,2 +1,3 @@
-var userName = 'Artsem';
-console.log([userName]);
+"use strict";
+const userName2 = 'Artsem';
+console.log([userName2]);
