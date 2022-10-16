@@ -10,6 +10,7 @@ const urls = [
   { path: '/classes', filePath: './src/5.classes_and_interfaces/index.html' },
   { path: '/interfaces', filePath: './src/5.classes_and_interfaces/index_interfaces.html' },
   { path: '/advanced-types', filePath: './src/6.advanced_types/index.html' },
+  { path: '/generics', filePath: './src/7.generics/index.html' },
 ]
 
 app.use('/dist', express.static(path.join(__dirname, 'dist')));

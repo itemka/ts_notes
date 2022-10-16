@@ -76,3 +76,5 @@ const greetablPersonWithOptional1 = new GreetablPersonWithOptional(26)
 console.log({ greetablPersonWithOptional1 })
 const greetablPersonWithOptional2 = new GreetablPersonWithOptional(26, 'Artsem')
 console.log({ greetablPersonWithOptional2 })
+
+// look at "generic classes" (7.generics)
