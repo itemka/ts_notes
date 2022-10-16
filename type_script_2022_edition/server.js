@@ -7,7 +7,8 @@ const urls = [
   { path: '/', filePath: 'index.html' },
   { path: '/get-started', filePath: './src/1.get_started/index.html' },
   { path: '/basics-and-basic-types', filePath: './src/2.ts_basics_and_basic_types/index.html' },
-  { path: '/classes-and-interfaces', filePath: './src/5.classes_and_interfaces/index.html' },
+  { path: '/classes', filePath: './src/5.classes_and_interfaces/index.html' },
+  { path: '/interfaces', filePath: './src/5.classes_and_interfaces/index_interfaces.html' },
 ]
 
 app.use('/dist', express.static(path.join(__dirname, 'dist')));
