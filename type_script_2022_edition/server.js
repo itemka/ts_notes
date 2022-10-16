@@ -9,6 +9,7 @@ const urls = [
   { path: '/basics-and-basic-types', filePath: './src/2.ts_basics_and_basic_types/index.html' },
   { path: '/classes', filePath: './src/5.classes_and_interfaces/index.html' },
   { path: '/interfaces', filePath: './src/5.classes_and_interfaces/index_interfaces.html' },
+  { path: '/advanced-types', filePath: './src/6.advanced_types/index.html' },
 ]
 
 app.use('/dist', express.static(path.join(__dirname, 'dist')));

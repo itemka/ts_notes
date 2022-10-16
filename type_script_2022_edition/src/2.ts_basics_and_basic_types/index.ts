@@ -1,8 +1,9 @@
 // basics types:
-
-// [ number ]
-// [ string ]
-// [ boolean ]
+/*
+* [ number ]
+* [ string ]
+* [ boolean ]
+*/
 const n1 = 5;
 const n2 = 2.8;
 const isPrintResult = false;
@@ -21,7 +22,9 @@ function add(number1: number, number2: number, isPrint: boolean, phrase?: string
   return sum
 }
 
-// [ object ]
+/*
+* [ object ]
+*/
 interface Person {
   name: string;
   age: number;
@@ -32,7 +35,9 @@ const person: Person = {
   age: 26,
 }
 
-// [ array ]
+/*
+* [ array ]
+*/
 interface PersonArray extends Person {
   hobbies: string[];
 }
@@ -42,7 +47,9 @@ const personArray: PersonArray = {
   hobbies: ['Sport', 'Thinking']
 }
 
-// [ tuple ]
+/*
+* [ tuple ]
+*/
 interface PersonTuple extends PersonArray {
   role: [number, string];
 }
@@ -52,7 +59,9 @@ const personTuple: PersonTuple = {
   role: [2, '2']
 }
 
-// [ enum ]
+/*
+* [ enum ]
+*/
 enum Role {
   ADMIN = 'ADMIN',
   READ_ONLY = 3,
@@ -68,10 +77,14 @@ const personEnum: PersonEnum = {
   role: Role.ADMIN,
 }
 
-// [ any ]
+/*
+* [ any ]
+*/
 const favoriteActivities: any = ['any', 4, false]
 
-// [ union types '|' ]
+/*
+* [ union types '|' ]
+*/
 combine(23, 5)
 
 function combine(input1: number | string, input2: number | string): number | string {
@@ -86,10 +99,14 @@ function combine(input1: number | string, input2: number | string): number | str
   return result
 }
 
-// [ type aliases / custom types ]
+/*
+* [ type aliases / custom types ]
+*/
 type Combinable = number | string;
 
-// [ literal types ]
+/*
+* [ literal types ]
+*/
 type ResultConversion = 'as-number' | 'as-text';
 
 combineWithLiteral(23, 5, 'as-number')
@@ -110,7 +127,9 @@ function combineWithLiteral(
   return result
 }
 
-// [ function return types & "void" ]
+/*
+* [ function return types & "void" ]
+*/
 printResult(addWithReturnType(1, 2))
 
 function addWithReturnType(n1: number, n2: number): number {
@@ -122,7 +141,9 @@ function printResult(number: number): void {
   // return 'result'
 }
 
-// [ functions as types ]
+/*
+* [ functions as types ]
+*/
 let combineValues: (number1: number, number2: number) => number;
 // let combineValues: Function;
 combineValues = addWithReturnType
@@ -130,7 +151,9 @@ combineValues = addWithReturnType
 
 combineValues(1, 2)
 
-// [ function types & callbacks ]
+/*
+* [ function types & callbacks ]
+*/
 addAndHandle(1, 2, (b: number) => b)
 
 function addAndHandle(n1: number, n2: number, cb: (a: number) => number) {
@@ -139,8 +162,10 @@ function addAndHandle(n1: number, n2: number, cb: (a: number) => number) {
   cb(result)
 }
 
-// [ unknown ]
-// It's better than 'any' due to you need to add check before assign 'unknown' to something
+/*
+* [ unknown ]
+* It's better than 'any' due to you need to add check before assign 'unknown' to something
+*/
 let useInput: unknown;
 let userName: string;
 
@@ -151,7 +176,9 @@ if (typeof useInput === 'string') {
   userName = useInput
 }
 
-// [ never ]
+/*
+* [ never ]
+*/
 console.log(generateError('New error: ', 432546542))
 
 function generateError(message: string, code: number): never {

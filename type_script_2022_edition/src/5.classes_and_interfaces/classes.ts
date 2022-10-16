@@ -268,5 +268,3 @@ console.log('singletons', {
   instance1: departmentWithPrivateConstructor,
   instance2: departmentWithPrivateConstructor2,
 })
-
-
