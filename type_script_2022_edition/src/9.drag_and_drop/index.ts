@@ -1,12 +1,22 @@
-interface Project {
-  id: number;
-  title: string;
-  description: string;
-  people: number;
+enum ProjectStatus {
+  ACTIVE,
+  FINISHED
 }
 
+class Project {
+  constructor(
+    public id: string,
+    public title: string,
+    public description: string,
+    public people: number,
+    public status: ProjectStatus,
+  ) {}
+}
+
+type Listener = (items: Project[]) => void;
+
 class ProjectState {
-  private listeners: any = []
+  private listeners: Listener[] = []
   private projects: Project[] = [];
   private static instance: ProjectState;
 
@@ -22,8 +32,8 @@ class ProjectState {
     return this.instance;
   }
 
-  addListener(listenerFn: Function) {
-    this.listeners.push(listenerFn);
+  addListener(listenerFunction: Listener) {
+    this.listeners.push(listenerFunction);
   }
 
   callListeners() {
@@ -32,13 +42,14 @@ class ProjectState {
     }
   }
 
-  addProject({ title, description, people }: Omit<Project, 'id'>) {
-    const newProject: Project = {
-      id: Date.now(),
+  addProject({ title, description, people }: Omit<Project, 'id' | 'status'>) {
+    const newProject = new Project(
+      Date.now().toString(),
       title,
       description,
-      people
-    }
+      people,
+      ProjectStatus.ACTIVE
+    )
 
     this.projects.push(newProject);
 
