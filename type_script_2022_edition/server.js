@@ -12,9 +12,11 @@ const urls = [
   { path: '/advanced-types', filePath: './src/6.advanced_types/index.html' },
   { path: '/generics', filePath: './src/7.generics/index.html' },
   { path: '/decorators', filePath: './src/8.decorators/index.html' },
+  { path: '/drag-and-drop', filePath: './src/9.drag_and_drop/index.html' },
 ]
 
 app.use('/dist', express.static(path.join(__dirname, 'dist')));
+app.use('/app.css', express.static(path.join(__dirname, 'src/9.drag_and_drop/app.css')));
 
 urls.forEach((url) => {
   app.get(url.path, (req, res) => {
