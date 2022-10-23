@@ -226,7 +226,7 @@ class ProductAccessorAndMethodReturnTypes {
 /*
 * [ example: creating an "autobind" decorator ]
 */
-function Autobind(_: any, _2: string | Symbol | number, descriptor: PropertyDescriptor): PropertyDescriptor {
+function AutobindSample(_: any, _2: string | Symbol | number, descriptor: PropertyDescriptor): PropertyDescriptor {
   console.log('Autobind decorator!', { descriptor })
 
   const originalMethod = descriptor.value;
@@ -243,7 +243,7 @@ function Autobind(_: any, _2: string | Symbol | number, descriptor: PropertyDesc
 class Printer {
   massage = 'Text message'
 
-  @Autobind
+  @AutobindSample
   showMessage() {
     console.log('Printer. showMessage: ', this.massage)
   }
