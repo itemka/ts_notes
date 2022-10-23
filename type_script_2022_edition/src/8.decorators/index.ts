@@ -285,7 +285,7 @@ function PositiveNumber(target: any, propertyName: string) {
   addValidatorsToValidatorConfig(['positive'], target, propertyName);
 }
 
-function validate(object: any): boolean {
+function validateSample(object: any): boolean {
   let isValid = true;
 
   const objectValidatorConfig = registeredValidators[object.constructor.name];
@@ -332,7 +332,7 @@ courseForm.addEventListener('submit', (event) => {
 
   const createdCourse = new Course(title, +price);
 
-  if (!validate(createdCourse)) {
+  if (!validateSample(createdCourse)) {
     throw Error('Invalid input, please try again!');
   }
 
