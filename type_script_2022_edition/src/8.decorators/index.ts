@@ -226,7 +226,7 @@ class ProductAccessorAndMethodReturnTypes {
 /*
 * [ example: creating an "autobind" decorator ]
 */
-function Autobind(_: any, _2: string | Symbol | number, descriptor: PropertyDescriptor): PropertyDescriptor {
+function AutobindSample(_: any, _2: string | Symbol | number, descriptor: PropertyDescriptor): PropertyDescriptor {
   console.log('Autobind decorator!', { descriptor })
 
   const originalMethod = descriptor.value;
@@ -243,7 +243,7 @@ function Autobind(_: any, _2: string | Symbol | number, descriptor: PropertyDesc
 class Printer {
   massage = 'Text message'
 
-  @Autobind
+  @AutobindSample
   showMessage() {
     console.log('Printer. showMessage: ', this.massage)
   }
@@ -285,7 +285,7 @@ function PositiveNumber(target: any, propertyName: string) {
   addValidatorsToValidatorConfig(['positive'], target, propertyName);
 }
 
-function validate(object: any): boolean {
+function validateSample(object: any): boolean {
   let isValid = true;
 
   const objectValidatorConfig = registeredValidators[object.constructor.name];
@@ -332,7 +332,7 @@ courseForm.addEventListener('submit', (event) => {
 
   const createdCourse = new Course(title, +price);
 
-  if (!validate(createdCourse)) {
+  if (!validateSample(createdCourse)) {
     throw Error('Invalid input, please try again!');
   }
 
