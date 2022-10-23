@@ -19,14 +19,39 @@
       color: black;
     }
   </style>
+  <script defer>
+    const pages = [
+      { href: '/get-started', title: 'Get started' },
+      { href: '/basics-and-basic-types', title: 'Basics and basic types' },
+      { href: '/classes', title: 'Classes' },
+      { href: '/interfaces', title: 'Interfaces' },
+      { href: '/advanced-types', title: 'Advanced types' },
+      { href: '/generics', title: 'Generics' },
+      { href: '/decorators', title: 'Decorators' },
+    ];
+
+    function displayLinks() {
+      if (!document && !document.body) {
+        return
+      }
+
+      const title = document.createElement('div');
+
+      title.innerText = 'TS';
+      document.body.appendChild(title)
+
+      pages.forEach((page) => {
+        const link = document.createElement('a');
+
+        link.setAttribute('href', page.href);
+        link.innerText = page.title;
+        document.body.appendChild(link)
+      })
+    }
+
+    window.onload = displayLinks
+  </script>
 </head>
 <body>
-  <div>TS</div>
-  <a href="/get-started">Get started</a>
-  <a href="/basics-and-basic-types">Basics and basic types</a>
-  <a href="/classes">Classes</a>
-  <a href="/interfaces">Interfaces</a>
-  <a href="/advanced-types">Advanced types</a>
-  <a href="/generics">Generics</a>
 </body>
 </html>
