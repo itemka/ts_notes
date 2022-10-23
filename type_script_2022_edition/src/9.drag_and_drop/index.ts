@@ -278,7 +278,8 @@ class ProjectItem extends Component<HTMLUListElement, HTMLLIElement> implements 
 
   @Autobind
   dragStartHandler(event: DragEvent): void {
-    console.log('Drag start', event);
+    event.dataTransfer!.setData('text/plain', this.project.id);
+    event.dataTransfer!.effectAllowed = 'move';
   }
 
   dragEndHandler(_: DragEvent): void {
@@ -319,11 +320,17 @@ class ProjectList extends Component<HTMLDivElement, HTMLElement> implements Drag
   }
 
   @Autobind
-  dragOverHandler(_: DragEvent): void {
-    this.element.querySelector('ul')!.classList.add('droppable');
+  dragOverHandler(event: DragEvent): void {
+    if (event.dataTransfer?.types?.[0] === 'text/plain') {
+      event.preventDefault();
+
+      this.element.querySelector('ul')!.classList.add('droppable');
+    }
   }
 
-  dropHandler(event: DragEvent): void {}
+  dropHandler(event: DragEvent): void {
+    console.log({ dropHandler: event.dataTransfer!.getData('text/plain') })
+  }
 
   @Autobind
   dragLeaveHandler(_: DragEvent): void {
