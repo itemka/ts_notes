@@ -369,30 +369,6 @@ class ProjectList extends Component<HTMLDivElement, HTMLElement> implements Drag
   }
 }
 
-const projectInput = new ProjectInput();
-const activeProjectList = new ProjectList('active');
-const finishedProjectList = new ProjectList('finished');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+new ProjectInput();
+new ProjectList('active');
+new ProjectList('finished');
