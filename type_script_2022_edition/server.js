@@ -13,6 +13,7 @@ const urls = [
   { path: '/generics', filePath: './src/7.generics/index.html' },
   { path: '/decorators', filePath: './src/8.decorators/index.html' },
   { path: '/drag-and-drop', filePath: './src/9.drag_and_drop/index.html' },
+  { path: '/namespaces', filePath: './src/10.namespaces/index.html' },
 ]
 
 app.use('/dist', express.static(path.join(__dirname, 'dist')));

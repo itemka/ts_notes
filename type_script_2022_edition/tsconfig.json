@@ -108,5 +108,6 @@
   "exclude": [
     // "node_modules", would be the default
     "**/*.dev.ts",
+    "src/10.namespaces",
   ]
 }
