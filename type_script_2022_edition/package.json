@@ -10,7 +10,7 @@
     "tsc:src:2": "tsc src/2.ts_basics_and_basic_types/index.ts",
     "tsc:src:3": "tsc src/3.ts_compiler_and_configuration/test.dev.ts",
     "tsc:src:5": "tsc src/3.ts_compiler_and_configuration/classes.ts",
-    "tsc:src:10": "tsc --watch --experimentalDecorators --target ES5 --module \"amd\" --outFile dist/10.namespaces/index.js src/10.namespaces/components/base-component.ts src/10.namespaces/components/project-input.ts src/10.namespaces/components/project-item.ts src/10.namespaces/components/project-list.ts src/10.namespaces/decorators/autobind.ts src/10.namespaces/models/drag-and-drop-types.ts src/10.namespaces/models/project.ts src/10.namespaces/store/project.ts src/10.namespaces/util/validation.ts src/10.namespaces/index.ts"
+    "tsc:src:10:n": "tsc --watch --experimentalDecorators --target ES5 --module \"amd\" --outFile dist/10.namespaces/index.js src/10.namespaces/components/base-component.ts src/10.namespaces/components/project-input.ts src/10.namespaces/components/project-item.ts src/10.namespaces/components/project-list.ts src/10.namespaces/decorators/autobind.ts src/10.namespaces/models/drag-and-drop-types.ts src/10.namespaces/models/project.ts src/10.namespaces/store/project.ts src/10.namespaces/util/validation.ts src/10.namespaces/index.ts"
   },
   "dependencies": {
     "express": "^4.18.2"
