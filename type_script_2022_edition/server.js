@@ -14,6 +14,7 @@ const urls = [
   { path: '/decorators', filePath: './src/8.decorators/index.html' },
   { path: '/drag-and-drop', filePath: './src/9.drag_and_drop/index.html' },
   { path: '/namespaces', filePath: './src/10.namespaces/index.html' },
+  { path: '/modules', filePath: './src/10.modules/index.html' },
 ]
 
 app.use('/dist', express.static(path.join(__dirname, 'dist')));
