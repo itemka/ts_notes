@@ -37,4 +37,3 @@ yarn-error.log*
 
 # helpful utility
 bin/temp.js
-webpack.config.js

@@ -6,6 +6,7 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <script src="dist/app.js" defer></script>
   <link rel="stylesheet" href="./app.css" />
   <style>
     div {
@@ -21,41 +22,6 @@
       color: black;
     }
   </style>
-  <script defer>
-    const pages = [
-      { href: '/get-started', title: 'Get started' },
-      { href: '/basics-and-basic-types', title: 'Basics and basic types' },
-      { href: '/classes', title: 'Classes' },
-      { href: '/interfaces', title: 'Interfaces' },
-      { href: '/advanced-types', title: 'Advanced types' },
-      { href: '/generics', title: 'Generics' },
-      { href: '/decorators', title: 'Decorators' },
-      { href: '/drag-and-drop', title: 'Drag & Drop' },
-      { href: '/namespaces', title: 'Namespaces' },
-      { href: '/modules', title: 'Modules' },
-    ];
-
-    function displayLinks() {
-      if (!document && !document.body) {
-        return
-      }
-
-      const title = document.createElement('div');
-
-      title.innerText = 'TS';
-      document.body.appendChild(title)
-
-      pages.forEach((page) => {
-        const link = document.createElement('a');
-
-        link.setAttribute('href', page.href);
-        link.innerText = page.title;
-        document.body.appendChild(link)
-      })
-    }
-
-    window.onload = displayLinks
-  </script>
 </head>
 <body>
 </body>
