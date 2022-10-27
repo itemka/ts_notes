@@ -4,10 +4,11 @@
   "main": "server.js",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon server.js",
-    "build": "webpack",
+    "start:dev": "nodemon server.js",
+    "start": "webpack",
+    "build": "webpack --config webpack.config.prod.js",
     "tsc:watch": "tsc --watch",
-    "tsc:src:app": "tsc src/app.js",
+    "tsc:src:app": "tsc src/app.ts",
     "tsc:src:1": "tsc src/1.get_started/index.ts",
     "tsc:src:2": "tsc src/2.ts_basics_and_basic_types/index.ts",
     "tsc:src:3": "tsc src/3.ts_compiler_and_configuration/test.dev.ts",
@@ -18,6 +19,7 @@
     "express": "^4.18.2"
   },
   "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
     "nodemon": "^2.0.20",
     "ts-loader": "^9.4.1",
     "typescript": "^4.8.4",
