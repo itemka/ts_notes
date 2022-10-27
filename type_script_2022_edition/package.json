@@ -5,7 +5,9 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon server.js",
+    "build": "webpack",
     "tsc:watch": "tsc --watch",
+    "tsc:src:app": "tsc src/app.js",
     "tsc:src:1": "tsc src/1.get_started/index.ts",
     "tsc:src:2": "tsc src/2.ts_basics_and_basic_types/index.ts",
     "tsc:src:3": "tsc src/3.ts_compiler_and_configuration/test.dev.ts",

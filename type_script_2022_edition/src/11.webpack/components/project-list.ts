@@ -3,6 +3,7 @@ import {DragTarget} from "../models/drag-and-drop-types";
 import {Project, ProjectStatus} from "../models/project";
 import {Autobind} from "../decorators/autobind";
 import {ProjectItem} from "./project-item";
+import {projectState} from "../store/project";
 
 export class ProjectList extends Component<HTMLDivElement, HTMLElement> implements DragTarget {
   assignedProjects: Project[] = [];

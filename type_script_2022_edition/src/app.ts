@@ -9,6 +9,7 @@ const pages = [
   { href: '/drag-and-drop', title: 'Drag & Drop' },
   { href: '/namespaces', title: 'Namespaces' },
   { href: '/modules', title: 'Modules' },
+  { href: '/webpack', title: 'Webpack' },
 ];
 
 function displayLinks() {
