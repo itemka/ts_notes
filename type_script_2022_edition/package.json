@@ -4,21 +4,27 @@
   "main": "server.js",
   "license": "MIT",
   "scripts": {
-    "start:dev": "nodemon server.js",
-    "start": "webpack",
-    "build": "webpack --config webpack.config.prod.js",
     "tsc:watch": "tsc --watch",
     "tsc:src:app": "tsc src/app.ts",
     "tsc:src:1": "tsc src/1.get_started/index.ts",
     "tsc:src:2": "tsc src/2.ts_basics_and_basic_types/index.ts",
     "tsc:src:3": "tsc src/3.ts_compiler_and_configuration/test.dev.ts",
     "tsc:src:5": "tsc src/3.ts_compiler_and_configuration/classes.ts",
-    "tsc:src:10:n": "tsc --watch --experimentalDecorators --target ES5 --module \"amd\" --outFile dist/10.namespaces/index.js src/10.namespaces/components/base-component.ts src/10.namespaces/components/project-input.ts src/10.namespaces/components/project-item.ts src/10.namespaces/components/project-list.ts src/10.namespaces/decorators/autobind.ts src/10.namespaces/models/drag-and-drop-types.ts src/10.namespaces/models/project.ts src/10.namespaces/store/project.ts src/10.namespaces/util/validation.ts src/10.namespaces/index.ts"
+    "tsc:src:10:n": "tsc --watch --experimentalDecorators --target ES5 --module \"amd\" --outFile dist/10.namespaces/index.js src/10.namespaces/components/base-component.ts src/10.namespaces/components/project-input.ts src/10.namespaces/components/project-item.ts src/10.namespaces/components/project-list.ts src/10.namespaces/decorators/autobind.ts src/10.namespaces/models/drag-and-drop-types.ts src/10.namespaces/models/project.ts src/10.namespaces/store/project.ts src/10.namespaces/util/validation.ts src/10.namespaces/index.ts",
+    "dev": "nodemon server.js",
+    "start:11": "webpack --config src/11.webpack/webpack.config.js",
+    "build:11": "webpack --config src/11.webpack/webpack.config.prod.js",
+    "start:12": "webpack --watch --config src/12.3rd-party-libraries-and-ts/webpack.config.js"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.13.2",
+    "express": "^4.18.2",
+    "lodash": "^4.17.21",
+    "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.186",
     "clean-webpack-plugin": "^4.0.0",
     "nodemon": "^2.0.20",
     "ts-loader": "^9.4.1",

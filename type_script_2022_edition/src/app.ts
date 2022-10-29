@@ -10,6 +10,7 @@ const pages = [
   { href: '/namespaces', title: 'Namespaces' },
   { href: '/modules', title: 'Modules' },
   { href: '/webpack', title: 'Webpack' },
+  { href: '/3rd-party-libraries-and-ts', title: '3rd party libraries & TS' },
 ];
 
 function displayLinks() {
