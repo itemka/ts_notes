@@ -5,8 +5,8 @@ module.exports = {
   mode: 'production',
   entry: './src/11.webpack/index.ts',
   output: {
-    filename: 'webpack_build.js',
-    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, '../../dist/11.webpack'),
   },
   module: {
     rules: [

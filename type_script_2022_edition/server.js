@@ -16,6 +16,7 @@ const urls = [
   { path: '/namespaces', filePath: './src/10.namespaces/index.html' },
   { path: '/modules', filePath: './src/10.modules/index.html' },
   { path: '/webpack', filePath: './src/11.webpack/index.html' },
+  { path: '/3rd-party-libraries-and-ts', filePath: './src/12.3rd-party-libraries-and-ts/index.html' },
 ]
 
 app.use('/dist', express.static(path.join(__dirname, 'dist')));
