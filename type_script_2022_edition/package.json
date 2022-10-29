@@ -26,6 +26,7 @@
     "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
+    "@types/google.maps": "^3.50.4",
     "@types/lodash": "^4.14.186",
     "clean-webpack-plugin": "^4.0.0",
     "dotenv-webpack": "^8.0.1",

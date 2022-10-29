@@ -14,6 +14,7 @@ type GoogleGeocodingResponse = {
 
 const form = document.querySelector('form')!;
 const addressInput = document.getElementById('address')! as HTMLInputElement;
+const mapElement = document.getElementById('map')! as HTMLElement;
 
 async function searchAddress(event: Event) {
   event.preventDefault();
@@ -30,15 +31,17 @@ async function searchAddress(event: Event) {
       throw new Error('Could not fetch location!');
     }
 
-    const { lat, lng } = data.results[0].geometry.location
+    const { location } = data.results[0].geometry;
 
-    console.log({
-      data,
-      lat,
-      lng,
-      api_key: process.env.GOOGLE_MAP_PLATFORM_API_KEY,
-      map_api: process.env.GOOGLE_MAP_API,
-    })
+    const map = new google.maps.Map(mapElement, {
+      center: location,
+      zoom: 10,
+    });
+
+    new google.maps.Marker({
+      position: location,
+      map,
+    });
   } catch (error) {
     console.error('Error in the searchAddress function', error);
   }
