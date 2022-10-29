@@ -16,11 +16,13 @@ const urls = [
   { path: '/namespaces', filePath: './src/10.namespaces/index.html' },
   { path: '/modules', filePath: './src/10.modules/index.html' },
   { path: '/webpack', filePath: './src/11.webpack/index.html' },
-  { path: '/3rd-party-libraries-and-ts', filePath: './src/12.3rd-party-libraries-and-ts/index.html' },
+  { path: '/3rd-party-libraries-and-ts', filePath: './src/12.3rd_party_libraries_and_ts/index.html' },
+  { path: '/select-and-share-place', filePath: './src/13.select_and_share_place/index.html' },
 ]
 
 app.use('/dist', express.static(path.join(__dirname, 'dist')));
 app.use('/app.css', express.static(path.join(__dirname, 'src/9.drag_and_drop/app.css')));
+app.use('/map.css', express.static(path.join(__dirname, 'src/13.select_and_share_place/map.css')));
 
 urls.forEach((url) => {
   app.get(url.path, (req, res) => {
