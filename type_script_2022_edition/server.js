@@ -22,6 +22,7 @@ const urls = [
 
 app.use('/dist', express.static(path.join(__dirname, 'dist')));
 app.use('/app.css', express.static(path.join(__dirname, 'src/9.drag_and_drop/app.css')));
+app.use('/map.css', express.static(path.join(__dirname, 'src/13.select_and_share_place/map.css')));
 
 urls.forEach((url) => {
   app.get(url.path, (req, res) => {
