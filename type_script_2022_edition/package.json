@@ -14,11 +14,14 @@
     "dev": "nodemon server.js",
     "start:11": "webpack --config src/11.webpack/webpack.config.js",
     "build:11": "webpack --config src/11.webpack/webpack.config.prod.js",
-    "start:12": "webpack --config src/12.3rd-party-libraries-and-ts/webpack.config.js"
+    "start:12": "webpack --watch --config src/12.3rd-party-libraries-and-ts/webpack.config.js"
   },
   "dependencies": {
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.13.2",
     "express": "^4.18.2",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.186",
