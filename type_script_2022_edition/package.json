@@ -14,7 +14,8 @@
     "dev": "nodemon server.js",
     "start:11": "webpack --config src/11.webpack/webpack.config.js",
     "build:11": "webpack --config src/11.webpack/webpack.config.prod.js",
-    "start:12": "webpack --watch --config src/12.3rd-party-libraries-and-ts/webpack.config.js"
+    "start:12": "webpack --watch --config src/12.3rd_party_libraries_and_ts/webpack.config.js",
+    "start:13": "webpack --watch --config src/13.select_and_share_place/webpack.config.js"
   },
   "dependencies": {
     "class-transformer": "^0.5.1",

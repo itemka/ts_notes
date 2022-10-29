@@ -11,6 +11,7 @@ const pages = [
   { href: '/modules', title: 'Modules' },
   { href: '/webpack', title: 'Webpack' },
   { href: '/3rd-party-libraries-and-ts', title: '3rd party libraries & TS' },
+  { href: '/select-and-share-place', title: 'Select & Share a Place' },
 ];
 
 function displayLinks() {
