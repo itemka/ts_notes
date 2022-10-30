@@ -33,7 +33,10 @@ urls.forEach((url) => {
 function start() {
   try {
     app.listen(PORT, (error) => {
-      if (error) throw error;
+      if (error) {
+        throw error;
+      }
+
       console.log(`> Ready on http://localhost:${PORT}`);
     });
   } catch (err) {
